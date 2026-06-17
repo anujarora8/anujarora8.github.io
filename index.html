@@ -211,10 +211,25 @@
     .col-info { width: 100%; }
 
     @media (max-width: 760px) {
-      .sidebar { display: none; }
-      .profile-top { flex-direction: column; }
-      .photo { width: 100%; flex: 0 0 auto; max-width: 240px; }
-      .info-table .k, .information .k { width: 120px; flex-basis: 120px; }
+      /* Header: let it wrap instead of clipping, drop secondary links */
+      .topbar { height: auto; }
+      .logo { width: auto; font-size: 20px; padding: 8px 14px; }
+      .nav { flex-wrap: wrap; gap: 8px 12px; height: auto; padding: 8px 14px; }
+      .nav .right { display: none; }
+
+      /* Stack the columns: main content first, sidebar (Change Log) below */
+      .layout { flex-direction: column; }
+      .main { order: 1; }
+      .sidebar {
+        order: 2; width: auto; flex: 0 0 auto;
+        border-right: none; border-top: 1px solid var(--fb-border);
+      }
+
+      /* Profile head + Networks/Information rows stack vertically */
+      .profile-top { flex-direction: column; gap: 14px; }
+      .photo { width: 100%; flex: 0 0 auto; max-width: 260px; }
+      .photo.mutual { max-width: none; }
+      .info-table .k, .information .k { width: 110px; flex-basis: 110px; }
     }
   </style>
 </head>
