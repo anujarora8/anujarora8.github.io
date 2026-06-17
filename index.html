@@ -17,6 +17,10 @@
   <meta name="twitter:description" content="AI GTM advisor and founder of AI Leverage. Former Chief Customer Officer at Ada." />
   <meta name="twitter:image" content="https://anujarora8.github.io/headshot.jpg" />
 
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="theme-color" content="#3b5998" />
+
   <style>
     :root {
       --fb-blue: #3b5998;
@@ -177,7 +181,10 @@
     }
     .mutual .sub { padding: 6px 0 8px; color: #555; display: flex; justify-content: space-between; }
     .friends-grid { display: flex; flex-wrap: wrap; gap: 12px; padding-bottom: 8px; max-width: 140px; }
-    .friend { text-align: center; width: 64px; }
+    .friend { display: block; text-align: center; width: 64px; text-decoration: none; }
+    .friend:hover .name { text-decoration: underline; }
+    .friend .thumb { transition: opacity 0.15s; }
+    .friend:hover .thumb { opacity: 0.85; }
     .friend .thumb {
       width: 64px; height: 64px;
       display: flex; align-items: center; justify-content: center;
@@ -331,10 +338,10 @@
             <div class="panel-head"><span>Networks</span></div>
             <div class="sub"><span></span><a href="https://linkedin.com/in/anujarora95" target="_blank" rel="noopener">See All</a></div>
             <div class="friends-grid">
-              <div class="friend"><div class="thumb"><img class="contain" src="ada.png" alt="Ada" /></div><div class="name">Ada</div></div>
-              <div class="friend"><div class="thumb"><img class="cover" src="ail.png" alt="AI Leverage" /></div><div class="name">AI&nbsp;Leverage</div></div>
-              <div class="friend"><div class="thumb"><img class="contain" src="accenture.png" alt="Accenture" /></div><div class="name">Accenture</div></div>
-              <div class="friend"><div class="thumb"><img class="contain" src="queens.png" alt="Queen's University" /></div><div class="name">Queen's</div></div>
+              <a class="friend" href="https://ada.cx" target="_blank" rel="noopener"><div class="thumb"><img class="contain" src="ada.png" alt="Ada" /></div><div class="name">Ada</div></a>
+              <a class="friend" href="https://aileverage.dev" target="_blank" rel="noopener"><div class="thumb"><img class="cover" src="ail.png" alt="AI Leverage" /></div><div class="name">AI&nbsp;Leverage</div></a>
+              <a class="friend" href="https://www.accenture.com/" target="_blank" rel="noopener"><div class="thumb"><img class="contain" src="accenture.png" alt="Accenture" /></div><div class="name">Accenture</div></a>
+              <a class="friend" href="https://www.queensu.ca" target="_blank" rel="noopener"><div class="thumb"><img class="contain" src="queens.png" alt="Queen's University" /></div><div class="name">Queen's</div></a>
             </div>
           </div>
 
